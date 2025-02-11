@@ -1,0 +1,6 @@
+projectKey=GFs
+serverUrl=http://localhost:9000
+serverVersion=25.2.0.102705
+dashboardUrl=http://localhost:9000/dashboard?id=GFs
+ceTaskId=3bb71d31-115f-481f-b8f7-983aab398ca9
+ceTaskUrl=http://localhost:9000/api/ce/task?id=3bb71d31-115f-481f-b8f7-983aab398ca9
