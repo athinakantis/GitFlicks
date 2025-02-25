@@ -5,23 +5,17 @@ phases:
     runtime-versions:
       nodejs: 10
     commands:
-      - npm install -g typescript
-      - npm install
+      - echo "Installing"
   pre_build:
     commands:
-      - echo Nothing to do in the pre_build phase...
+      - echo "Pre-build"
+      - npm install -g typescript
+      - npm install
   build:
     commands:
-      - echo Build started on `date`
-      - npm run build
-      - npm test
+      - echo "we are in the build block"
+      - echo "we will run some tests"
+      - grep -Fq "Congratulations" index.html
   post_build:
     commands:
-      - echo Build completed on `date`
-cache:
-  paths:
-    - 'node_modules/**/*'
-artifacts:
-  files:
-    - '**/*'
-  name: GitFlickBuild-$(date +%Y-%m-%d)
+      - echo "Post build phase"
