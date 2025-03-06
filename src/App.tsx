@@ -1,11 +1,9 @@
 import './App.css';
+import Main from './components/Main';
 
 function App() {
     return (
-        <>
-            <h1>GitFlick</h1>
-            <p>Currently under renovation</p>
-        </>
+        <Main />
     );
 }
 
