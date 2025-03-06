@@ -1,6 +1,6 @@
 import axios from "axios";
 
-export const send = async (baseUrl: string, dataToSend: any, auth: any) => {
+export const send = async (baseUrl: string, dataToSend: Record<string, string>, auth: Record<string, string>) => {
 
     try {
         const response = await axios.post(baseUrl, dataToSend, { headers: auth });

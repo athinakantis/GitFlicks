@@ -1,7 +1,10 @@
 import './App.css';
+import shorten from './utility/shortenerApi';
 
 function App() {
 
+
+    shorten("https://google.com");
 
     return (
         <>
