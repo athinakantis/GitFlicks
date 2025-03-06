@@ -1,16 +1,14 @@
 import './App.css';
-import shorten from './utility/shortenerApi';
+
+import Main from './components/Main';
+
 
 function App() {
 
 
-    shorten("https://google.com");
 
     return (
-        <>
-            <h1>GitFlick</h1>
-            <p>Currently under renovation</p>
-        </>
+        <Main />
     );
 }
 
