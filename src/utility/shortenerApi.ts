@@ -11,7 +11,6 @@ export default async function shorten(longUrl: string) {
 
     const response = await send(APILINK, data, headers);
 
-    console.log(response);
-    return response;
+    return response.link;
 
 }
