@@ -2,7 +2,6 @@ import { send } from "./axios";
 
 
 
-
 export default async function shorten(longUrl: string) {
 
     const data = {
