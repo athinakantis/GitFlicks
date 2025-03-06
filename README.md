@@ -1,3 +1,7 @@
 # GitFlicks
 
-[![Quality Gate Status](https://sonarcloud.io/api/project_badges/measure?project=athinakantis_GitFlicks&metric=alert_status)](https://sonarcloud.io/summary/new_code?id=athinakantis_GitFlicks)
+## Authors
+
+[Hossain](https://github.com/belaeat)  
+[Nikita](https://github.com/nikiluzianin)  
+[Athina](https://github.com/athinakantis/)
