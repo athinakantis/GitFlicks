@@ -1,12 +1,25 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Hand from './icons/Hand';
+import shorten from '../utility/shortenerApi';
+
 
 const Main: React.FC = () => {
-    const [originalLink, setOriginalLink] = useState('');
+    const [longUrl, setLongUrl] = useState('');
+    const [shortUrl, setShortUrl] = useState('')
+    const [isSubmitting, setIsSubmitting] = useState(false)
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-        setOriginalLink(e.target.value);
-    };
+        setLongUrl(e.target.value);
+      };
+
+    const handleClick = () =>{
+      setIsSubmitting(true)
+    }
+
+    useEffect(() =>{
+      if(isSubmitting) shorten(longUrl).then((data) => setShortUrl(data.short_url))
+    },[isSubmitting])
+    
 
     return (
         <main>
@@ -16,7 +29,7 @@ const Main: React.FC = () => {
                     <Hand classes='hand'/>
                     <p>A simple, free-to-use URL shortener.</p>
                 </div>
-                <form>
+                <div>
                     <div className='input-container'>
                         <label htmlFor='originalLink'>
                             Paste a URL to shorten
@@ -24,15 +37,15 @@ const Main: React.FC = () => {
                         <input
                             className='input-link'
                             type='text'
-                            value={originalLink}
+                            value={longUrl}
                             id='originalLink'
                             onChange={handleInputChange}
                         />
                     </div>
-                    <button type='submit' className='CTA-button'>
+                    <button onClick={handleClick} type='button' className='CTA-button'>
                         <span>Shorten</span>
                     </button>
-                </form>
+                </div>
             </div>
         </main>
     );
