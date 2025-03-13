@@ -1,4 +1,4 @@
-export const Copy = () => {
+const Copy = () => {
     return (
         <svg
             xmlns='http://www.w3.org/2000/svg'
@@ -17,3 +17,5 @@ export const Copy = () => {
         </svg>
     );
 };
+
+export default Copy;

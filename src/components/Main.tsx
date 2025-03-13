@@ -2,8 +2,7 @@ import React, { useState } from 'react';
 import Hand from './icons/Hand';
 import shorten from '../utility/shortenerApi';
 import { Loading } from './Loading';
-import { Copy } from './icons/Copy';
-import { CopyToClipboard } from 'react-copy-to-clipboard';
+import Copy from './Copy';
 
 const Main: React.FC = () => {
     const [longUrl, setLongUrl] = useState('');
@@ -42,11 +41,7 @@ const Main: React.FC = () => {
                             <p>Here is your shortened URL!</p>
                             <div className='shortened-url'>
                                 <p>{shortUrl}</p>
-                                <CopyToClipboard text={shortUrl}>
-                                    <button aria-label='Copy link'>
-                                        <Copy />
-                                    </button>
-                                </CopyToClipboard>
+                                <Copy shortUrl={shortUrl}/>
                             </div>
                         </div>
                         <button

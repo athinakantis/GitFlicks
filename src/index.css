@@ -63,6 +63,10 @@ main {
     font-family: var(--heading-font);
 }
 
+p {
+    font-weight: 500;
+}
+
 h1 {
     width: fit-content;
     margin: 0 auto;
@@ -189,13 +193,34 @@ LOADING STYLING
     align-items: center;
     justify-content: center;
     font-size: clamp(18px, 3vw, 32px);
+    gap: 2rem;
 
     & h2 {
         font-family: var(--secondary-font);
+        display: flex;
     }
 
-    & span {
-        margin: 0 0.5rem;
+    & h2 > div {
+        scale: 0;
+        animation-name: load;
+        animation-duration: 1200ms;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        transform-origin: bottom;
+    }
+
+    & h2 > div:nth-of-type(2) {
+        animation-delay: 400ms;
+    }
+
+    & h2 > div:last-of-type {
+        animation-delay: 800ms;
+    }
+}
+
+@keyframes load {
+    to {
+        scale: 1;
     }
 }
 
