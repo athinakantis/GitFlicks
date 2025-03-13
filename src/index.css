@@ -194,3 +194,47 @@ LOADING STYLING
         margin: 0 0.5rem;
     }
 }
+
+/*
+SHORTENED URL
+*/
+.shortened-url {
+    display: flex;
+    width: 352px;
+    margin: 0 auto;
+    background-color: var(--white);
+    height: 60px;
+    box-shadow: var(--input-innershadow);
+    margin-top: 17px;
+    margin-bottom: 48px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px 0 18px;
+
+    & p {
+        color: #4385c0;
+        font-weight: 700;
+    }
+
+    & button {
+        background-color: transparent;
+        padding: 5px;
+        border: none;
+
+        & svg {
+            position: relative;
+            top: 3px;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+    }
+}
+
+.output-container {
+    line-height: 1;
+    & span {
+        font-weight: 700;
+    }
+}
