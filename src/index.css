@@ -122,6 +122,8 @@ option {
     text-align: center;
     padding: clamp(10px, 5vw, 102px) clamp(10px, 10vw, 160px);
     background-color: var(--elementBackground);
+    width: 821px;
+    min-height: 590px;
     border-radius: 15px;
     box-shadow: var(--smallShadow);
     position: relative;
@@ -173,4 +175,22 @@ LOGO STYLING
     animation-duration: 7s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
+}
+
+/*
+LOADING STYLING
+*/
+.loading-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(18px, 3vw, 32px);
+
+    & h2 {
+        font-family: var(--secondary-font);
+    }
+
+    & span {
+        margin: 0 0.5rem;
+    }
 }
