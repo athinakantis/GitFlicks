@@ -29,7 +29,23 @@ const Main: React.FC = () => {
                     <Hand classes='hand'/>
                     <p>A simple, free-to-use URL shortener.</p>
                 </div>
-                <div>
+                {
+                    shortUrl ? 
+                    <div>
+                        <div className='output-container'>
+                            <p>All done!</p>
+                            <p>Here is your shortened URL!</p>
+                            <div className='shortened-url'>
+                                <p>{shortUrl}</p>
+                                <img src="" alt="copy-to-clipboard" />
+                            </div>
+
+                        </div>
+                        <button onClick={handleClick} type='button' className='CTA-button'>
+                            <span>Try It Again!</span>
+                        </button>
+                    </div> : 
+                    <div>
                     <div className='input-container'>
                         <label htmlFor='originalLink'>
                             Paste a URL to shorten
@@ -46,6 +62,7 @@ const Main: React.FC = () => {
                         <span>Shorten</span>
                     </button>
                 </div>
+                }
             </div>
         </main>
     );
