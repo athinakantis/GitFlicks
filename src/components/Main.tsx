@@ -10,16 +10,12 @@ const Main: React.FC = () => {
 
     const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         setLongUrl(e.target.value);
-      };
+    };
 
-    const handleClick = () =>{
-      setIsSubmitting(true)
+    const handleClick = () => {
+        setIsSubmitting(true);
+        shorten(longUrl).then((data) => setShortUrl(data.short_url)).finally(() => setIsSubmitting(false));
     }
-
-    useEffect(() =>{
-      if(isSubmitting) shorten(longUrl).then((data) => setShortUrl(data.short_url))
-    },[isSubmitting])
-    
 
     return (
         <main>
@@ -30,38 +26,38 @@ const Main: React.FC = () => {
                     <p>A simple, free-to-use URL shortener.</p>
                 </div>
                 {
-                    shortUrl ? 
-                    <div>
-                        <div className='output-container'>
-                            <p>All done!</p>
-                            <p>Here is your shortened URL!</p>
-                            <div className='shortened-url'>
-                                <p>{shortUrl}</p>
-                                <img src="" alt="copy-to-clipboard" />
-                            </div>
+                    shortUrl ?
+                        <div>
+                            <div className='output-container'>
+                                <p>All done!</p>
+                                <p>Here is your shortened URL!</p>
+                                <div className='shortened-url'>
+                                    <p>{shortUrl}</p>
+                                    <img src="" alt="copy-to-clipboard" />
+                                </div>
 
+                            </div>
+                            <button onClick={handleClick} type='button' className='CTA-button'>
+                                <span>Try It Again!</span>
+                            </button>
+                        </div> :
+                        <div>
+                            <div className='input-container'>
+                                <label htmlFor='originalLink'>
+                                    Paste a URL to shorten
+                                </label>
+                                <input
+                                    className='input-link'
+                                    type='text'
+                                    value={longUrl}
+                                    id='originalLink'
+                                    onChange={handleInputChange}
+                                />
+                            </div>
+                            <button onClick={handleClick} type='button' className='CTA-button'>
+                                <span>Shorten</span>
+                            </button>
                         </div>
-                        <button onClick={handleClick} type='button' className='CTA-button'>
-                            <span>Try It Again!</span>
-                        </button>
-                    </div> : 
-                    <div>
-                    <div className='input-container'>
-                        <label htmlFor='originalLink'>
-                            Paste a URL to shorten
-                        </label>
-                        <input
-                            className='input-link'
-                            type='text'
-                            value={longUrl}
-                            id='originalLink'
-                            onChange={handleInputChange}
-                        />
-                    </div>
-                    <button onClick={handleClick} type='button' className='CTA-button'>
-                        <span>Shorten</span>
-                    </button>
-                </div>
                 }
             </div>
         </main>
