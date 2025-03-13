@@ -115,12 +115,16 @@ option {
     border-radius: 5px;
     border: none;
     padding: 0 1rem;
+
+    &:is(:autofill, :-webkit-autofill, :-internal-autofill-selected) {
+        background-color: var(--white) !important;
+    }
 }
 
 /* CONTAINER STYLING */
 .content-container {
     text-align: center;
-    padding: clamp(10px, 5vw, 102px) clamp(10px, 10vw, 160px);
+    padding: clamp(10px, 10vw, 102px) clamp(10px, 20vw, 160px);
     background-color: var(--elementBackground);
     width: 821px;
     min-height: 590px;
@@ -233,7 +237,8 @@ SHORTENED URL
 }
 
 .output-container {
-    line-height: 1;
+    margin-top: 20px;
+    line-height: 1.2;
     & span {
         font-weight: 700;
     }
