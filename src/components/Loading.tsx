@@ -1,5 +1,6 @@
 export const Loading = () => {
     return (
+        <main>
         <div className='content-container loading-container'>
             <h2>Shortening
             <span>.</span>
@@ -7,5 +8,6 @@ export const Loading = () => {
             <span>.</span>
             </h2>
         </div>
+        </main>
     );
 };
