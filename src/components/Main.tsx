@@ -22,7 +22,7 @@ const Main: React.FC = () => {
             <div className='content-container'>
                 <div id='logo'>
                     <h1>GitFlick<span>s</span></h1>
-                    <Hand />
+                    <Hand classes='hand'/>
                     <p>A simple, free-to-use URL shortener.</p>
                 </div>
                 {

@@ -1,0 +1,16 @@
+.alert {
+    width: clamp(150px, 30vw, 500px);
+    height: 300px;
+    padding: clamp(10px, 3vw, 2rem);
+    position: absolute;
+    background-color: var(--white);
+    box-shadow: var(--smallShadow);
+    border-radius: 15px;
+
+    z-index: 2;
+}
+
+.alert p {
+    font-size: 32px;
+    font-weight: 500;
+}
