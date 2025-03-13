@@ -3,7 +3,7 @@ import Hand from './icons/Hand';
 import shorten from '../utility/shortenerApi';
 import { Loading } from './Loading';
 import { Copy } from './icons/Copy';
-import {CopyToClipboard} from 'react-copy-to-clipboard';
+import { CopyToClipboard } from 'react-copy-to-clipboard';
 
 const Main: React.FC = () => {
     const [longUrl, setLongUrl] = useState('');
@@ -43,9 +43,9 @@ const Main: React.FC = () => {
                             <div className='shortened-url'>
                                 <p>{shortUrl}</p>
                                 <CopyToClipboard text={shortUrl}>
-                                <button aria-label='Copy link'>
-                                    <Copy />
-                                </button>
+                                    <button aria-label='Copy link'>
+                                        <Copy />
+                                    </button>
                                 </CopyToClipboard>
                             </div>
                         </div>
@@ -54,7 +54,7 @@ const Main: React.FC = () => {
                             type='button'
                             className='CTA-button'
                         >
-                            <span>Try It Again!</span>
+                            <span>Try It Again</span>
                         </button>
                     </div>
                 ) : (
