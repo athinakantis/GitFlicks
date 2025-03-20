@@ -27,9 +27,9 @@ const Main: React.FC = () => {
             <div className='content-container'>
                 <div id='logo'>
                     <h1>
-                        GitFlick<span>s</span>
+                        GitFlick<span><Hand classes='hand' /></span>
                     </h1>
-                    <Hand classes='hand' />
+
                     {!shortUrl && <p>A simple, free-to-use URL shortener.</p>}
                 </div>
                 {shortUrl ? (
@@ -41,7 +41,7 @@ const Main: React.FC = () => {
                             <p>Here is your shortened URL!</p>
                             <div className='shortened-url'>
                                 <p>{shortUrl}</p>
-                                <Copy shortUrl={shortUrl}/>
+                                <Copy shortUrl={shortUrl} />
                             </div>
                         </div>
                         <button
@@ -49,7 +49,7 @@ const Main: React.FC = () => {
                             type='button'
                             className='CTA-button'
                         >
-                            <span>Try It Again</span>
+                            <span>Shorten another</span>
                         </button>
                     </div>
                 ) : (
