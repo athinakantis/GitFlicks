@@ -5,79 +5,84 @@ GENERAL STYLING
 */
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 :root {
-    line-height: 1.5;
-    font-weight: 400;
+  line-height: 1.5;
+  font-weight: 400;
 
-    color-scheme: light dark;
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #242424;
+  color-scheme: light dark;
+  color: rgba(255, 255, 255, 0.87);
+  background-color: #242424;
 
-    font-synthesis: none;
-    text-rendering: optimizeLegibility;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 
-    --heading-font: 'Familjen Grotesk';
-    --secondary-font: 'IBM Plex Mono';
+  --heading-font: 'Familjen Grotesk';
+  --secondary-font: 'IBM Plex Mono';
 
-    --accentGreen: #cdffcf;
-    --accentBlue: #80bff7;
-    --text: #242424;
-    --white: #ffffff;
-    --elementBackground: #f5f5f5;
-    --background: #e9e9e9;
+  --accentGreen: #cdffcf;
+  --accentBlue: #80bff7;
+  --text: #242424;
+  --white: #ffffff;
+  --elementBackground: #f5f5f5;
+  --background: #e9e9e9;
 
-    --CTA-button-text-shadow: rgba(63, 92, 113, 0.55);
-    --CTA-button-gradient: linear-gradient(
-        90deg,
-        var(--accentBlue),
-        var(--accentGreen)
-    );
-    --CTA-button-font-size: 23px;
-    --CTA-button-border-radius: 4px;
+  --CTA-button-text-shadow: rgba(63, 92, 113, 0.55);
+  --CTA-button-gradient: linear-gradient(
+    90deg,
+    var(--accentBlue),
+    var(--accentGreen)
+  );
+  --CTA-button-font-size: 23px;
+  --CTA-button-border-radius: 4px;
 
-    --input-innershadow: inset 3px 4px 4px -3px rgba(0, 0, 0, 0.25);
-    --input-height: 60px;
+  --input-innershadow: inset 3px 4px 4px -3px rgba(0, 0, 0, 0.25);
+  --input-height: 60px;
 
-    --linkColor: #4385c0;
+  --linkColor: #4385c0;
 
-    --logo-font-size: 75px;
+  --logo-font-size: 75px;
 
-    --smallShadow: 5px 6px 10px rgba(0, 0, 0, 0.25);
+  --smallShadow: 5px 6px 10px rgba(0, 0, 0, 0.25);
 }
 
 main {
-    min-height: 80vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  min-height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 :is(h1, h2, h3, h4, h5, h6) {
-    font-family: var(--heading-font);
+  font-family: var(--heading-font);
 }
 
 p {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 h1 {
-    width: fit-content;
-    margin: 0 auto;
-    font-size: var(--logo-font-size);
+  width: fit-content;
+  margin: 0 auto;
+  font-size: var(--logo-font-size);
+
+  & span {
+    width: 40px;
+    display: inline-block;
+  }
 }
 
 body {
-    height: 100vh;
-    color: var(--text);
-    font-family: var(--secondary-font);
-    background-color: var(--background);
+  height: 100vh;
+  color: var(--text);
+  font-family: var(--secondary-font);
+  background-color: var(--background);
 }
 
 input,
@@ -85,186 +90,185 @@ button,
 a,
 select,
 option {
-    font-family: inherit;
-    font-size: inherit;
-    color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
 }
 
 .CTA-button {
-    background: var(--CTA-button-gradient);
-    text-transform: uppercase;
-    font-size: var(--CTA-button-font-size);
-    padding: 8px 52px;
-    font-weight: 700;
-    border-radius: var(--CTA-button-border-radius);
-    border: none;
-    box-shadow: inset 0 -5px 1px rgba(0, 0, 0, 0.35),
-        inset 0 4px 4px rgba(255, 255, 255, 0.55),
-        inset 0 0 5px rgba(0, 0, 0, 0.25);
+  background: var(--CTA-button-gradient);
+  text-transform: uppercase;
+  font-size: var(--CTA-button-font-size);
+  padding: 8px 42px;
+  font-weight: 700;
+  border-radius: var(--CTA-button-border-radius);
+  border: none;
+  box-shadow: inset 0 -5px 1px rgba(0, 0, 0, 0.35),
+    inset 0 4px 4px rgba(255, 255, 255, 0.55), inset 0 0 5px rgba(0, 0, 0, 0.25);
 
-    & > span {
-        position: relative;
-        top: -2px;
-    }
+  & > span {
+    position: relative;
+    top: -2px;
+  }
 
-    &:hover {
-        cursor: pointer;
-    }
+  &:hover {
+    cursor: pointer;
+  }
 }
 
 .input-link {
-    background-color: var(--white);
-    box-shadow: var(--input-innershadow);
-    height: var(--input-height);
-    border-radius: 5px;
-    border: none;
-    padding: 0 1rem;
+  background-color: var(--white);
+  box-shadow: var(--input-innershadow);
+  height: var(--input-height);
+  border-radius: 5px;
+  border: none;
+  padding: 0 1rem;
 
-    &:is(:autofill, :-webkit-autofill, :-internal-autofill-selected) {
-        background-color: var(--white) !important;
-    }
+  &:is(:autofill, :-webkit-autofill, :-internal-autofill-selected) {
+    background-color: var(--white) !important;
+  }
 }
 
 /* CONTAINER STYLING */
 .content-container {
-    text-align: center;
-    padding: clamp(10px, 10vw, 102px) clamp(10px, 20vw, 160px);
-    background-color: var(--elementBackground);
-    width: 821px;
-    min-height: 590px;
-    border-radius: 15px;
-    box-shadow: var(--smallShadow);
-    position: relative;
+  text-align: center;
+  padding: clamp(10px, 10vw, 102px) clamp(10px, 20vw, 160px);
+  background-color: var(--elementBackground);
+  width: 821px;
+  min-height: 590px;
+  border-radius: 15px;
+  box-shadow: var(--smallShadow);
+  position: relative;
 }
 
 #originalLink {
-    width: clamp(150px, 500px, 500px);
+  width: clamp(150px, 500px, 500px);
 }
 
 .input-container {
-    display: flex;
-    flex-direction: column;
-    border: none;
-    margin-bottom: 46px;
-    margin-top: 42px;
+  display: flex;
+  flex-direction: column;
+  border: none;
+  margin-bottom: 46px;
+  margin-top: 42px;
 }
 
 .input-container > label {
-    font-size: 23px;
-    font-weight: 700;
-    margin-bottom: 11px;
+  font-size: 23px;
+  font-weight: 700;
+  margin-bottom: 11px;
 }
 
 /* 
 LOGO STYLING 
 */
 #logo {
-    text-align: center;
-    line-height: 1.2;
-    position: relative;
+  text-align: center;
+  line-height: 1.2;
+  position: relative;
 }
 #logo > p {
-    font-size: 16px;
-    font-weight: 500;
+  font-size: 16px;
+  font-weight: 500;
 }
 
 #hand {
-    position: absolute;
+  position: absolute;
 
-    right: 5.5rem;
-    top: 10px;
+  right: 5.5rem;
+  top: 10px;
 }
 
 @keyframes flick-s {
 }
 
 .flick-s {
-    animation-name: flick-s;
-    animation-duration: 7s;
-    animation-iteration-count: 1;
-    animation-fill-mode: forwards;
+  animation-name: flick-s;
+  animation-duration: 7s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
 }
 
 /*
 LOADING STYLING
 */
 .loading-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(18px, 3vw, 32px);
+  gap: 2rem;
+
+  & h2 {
+    font-family: var(--secondary-font);
     display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: clamp(18px, 3vw, 32px);
-    gap: 2rem;
+  }
 
-    & h2 {
-        font-family: var(--secondary-font);
-        display: flex;
-    }
+  & h2 > div {
+    scale: 0;
+    animation-name: load;
+    animation-duration: 1200ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    transform-origin: center;
+  }
 
-    & h2 > div {
-        scale: 0;
-        animation-name: load;
-        animation-duration: 1200ms;
-        animation-iteration-count: infinite;
-        animation-direction: alternate-reverse;
-        transform-origin: bottom;
-    }
+  & h2 > div:nth-of-type(2) {
+    animation-delay: 400ms;
+  }
 
-    & h2 > div:nth-of-type(2) {
-        animation-delay: 400ms;
-    }
-
-    & h2 > div:last-of-type {
-        animation-delay: 800ms;
-    }
+  & h2 > div:last-of-type {
+    animation-delay: 800ms;
+  }
 }
 
 @keyframes load {
-    to {
-        scale: 1;
-    }
+  to {
+    scale: 1;
+  }
 }
 
 /*
 SHORTENED URL
 */
 .shortened-url {
-    display: flex;
-    width: 352px;
-    margin: 0 auto;
-    background-color: var(--white);
-    height: 60px;
-    box-shadow: var(--input-innershadow);
-    margin-top: 17px;
-    margin-bottom: 48px;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 10px 0 18px;
+  display: flex;
+  width: 352px;
+  margin: 0 auto;
+  background-color: var(--white);
+  height: 60px;
+  box-shadow: var(--input-innershadow);
+  margin-top: 17px;
+  margin-bottom: 48px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10px 0 18px;
 
-    & p {
-        color: #4385c0;
-        font-weight: 700;
+  & p {
+    color: #4385c0;
+    font-weight: 700;
+  }
+
+  & button {
+    background-color: transparent;
+    padding: 5px;
+    border: none;
+
+    & svg {
+      position: relative;
+      top: 3px;
     }
 
-    & button {
-        background-color: transparent;
-        padding: 5px;
-        border: none;
-
-        & svg {
-            position: relative;
-            top: 3px;
-        }
-
-        &:hover {
-            cursor: pointer;
-        }
+    &:hover {
+      cursor: pointer;
     }
+  }
 }
 
 .output-container {
-    margin-top: 20px;
-    line-height: 1.2;
-    & span {
-        font-weight: 700;
-    }
+  margin-top: 20px;
+  line-height: 1.2;
+  & span {
+    font-weight: 700;
+  }
 }
